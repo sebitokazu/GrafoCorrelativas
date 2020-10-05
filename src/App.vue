@@ -15,7 +15,7 @@
 
 		<v-main>
 			<v-container>
-				<v-row no-gutters>
+				<v-row>
 					<sugiyama :dag="dag" />
 				</v-row>
 			</v-container>

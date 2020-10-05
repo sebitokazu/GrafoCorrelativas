@@ -5,6 +5,7 @@
 <script>
 import * as d3_base from "d3";
 import * as d3_dag from "d3-dag";
+import * as d3_wrap from "d3-textwrap";
 
 export default {
 	name: "Sugiyama",
@@ -18,7 +19,7 @@ export default {
 		layering: "Simplex (slow)",
 		decross: "Optimal (slow)",
 		coord: "Minimum Curves (slow)",
-		d3: Object.assign({}, d3_base, d3_dag)
+		d3: Object.assign({}, d3_base, d3_dag, d3_wrap)
 	}),
 	mounted() {
 		this.sugiyama(this.dag);
@@ -75,8 +76,8 @@ export default {
 			const svgSelection = this.d3
 				.select("#graph")
 				.append("svg")
-				.attr("width", this.width * 0.75)
-				.attr("height", this.height * 0.75)
+				.attr("width", "100%")
+				.attr("height", "100%")
 				.attr(
 					"viewBox",
 					`${-nodeRadius} ${-nodeRadius} ${this.width * 1.25 +
@@ -101,6 +102,11 @@ export default {
 				.x(d => d.x)
 				.y(d => d.y);
 
+			/*svgSelection
+				.append("rect")
+				.attr("width", "100%")
+				.attr("height", "100%")
+				.attr("fill", "black");*/
 			// Plot edges
 			svgSelection
 				.append("g")
@@ -140,10 +146,15 @@ export default {
 				.attr("transform", ({ x, y }) => `translate(${x}, ${y})`);
 
 			// Plot node circles
-			nodes
+			/*nodes
 				.append("circle")
 				.attr("r", 35)
-				.attr("fill", n => colorMap[n.id]);
+                .attr("fill", n => colorMap[n.id]);*/
+			nodes
+				.append("rect")
+				.attr("fill", n => colorMap[n.id])
+				.attr("width", "200")
+				.attr("height", "100");
 
 			if (withArrows) {
 				const arrow = this.d3
@@ -177,15 +188,28 @@ export default {
 					.attr("stroke", "white")
 					.attr("stroke-width", 1.5);
 			}
+			var wrap;
+			// create a text wrapping function
+			wrap = this.d3
+				.textwrap()
+				// wrap to 100 x 200 pixels
+				.bounds({ height: 100, width: 200 })
+				// pad by an additional 10 pixels
+				.padding(10)
+				.method("tspans");
 
 			nodes
 				.append("text")
-				.text(d => d.id)
+				//.text(d => d.id)
+				.text("Sistemas de Representacion\n 10.10 - Creditos: 3")
 				.attr("font-weight", "bold")
-				.attr("font-family", "sans-serif")
-				.attr("text-anchor", "middle")
+				.attr("font-family", "Tahoma, Geneva, sans-serif")
+				.attr("font-size", "20")
+				.attr("text-anchor", "start")
 				.attr("alignment-baseline", "middle")
-				.attr("fill", "white");
+				.attr("dominant-baseline", "middle")
+				.attr("fill", "black")
+				.call(wrap);
 		}
 	}
 };
