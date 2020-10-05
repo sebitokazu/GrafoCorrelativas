@@ -16,7 +16,30 @@
 		<v-main>
 			<v-container>
 				<v-row>
-					<sugiyama :dag="dag" />
+					<v-col cols="4">
+						<v-select
+							:items="carreras"
+							label="Carrera"
+							dense
+							filled
+						>
+						</v-select>
+					</v-col>
+					<v-col cols="2">
+						<v-btn color="info" class="mt-3">Cargar</v-btn>
+					</v-col>
+					<v-spacer></v-spacer>
+					<v-col>
+						<v-btn color="success" class="mt-2"
+							>Descargar
+							<v-icon right>get_app</v-icon>
+						</v-btn>
+					</v-col>
+				</v-row>
+				<v-row>
+					<v-col cols="12">
+						<sugiyama :dag="dag" />
+					</v-col>
 				</v-row>
 			</v-container>
 		</v-main>
@@ -39,7 +62,8 @@ export default {
 	},
 
 	data: () => ({
-		dag: d3_dag.dagStratify()(json)
+		dag: d3_dag.dagStratify()(json),
+		carreras: ["Informatica", "Industrial", "Bioingenieria"]
 	}),
 	mounted() {},
 	methods: {}
