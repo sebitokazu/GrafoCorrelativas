@@ -30,7 +30,7 @@
 					</v-col>
 					<v-spacer></v-spacer>
 					<v-col>
-						<v-btn color="success" class="mt-2"
+						<v-btn color="success" class="mt-2" @click="download"
 							>Descargar
 							<v-icon right>get_app</v-icon>
 						</v-btn>
@@ -48,10 +48,11 @@
 
 <script>
 //import HelloWorld from "./components/HelloWorld";
-//import * as d3 from "d3";
+import * as d3 from "d3";
 import * as d3_dag from "d3-dag";
 import sugiyama from "./components/Sugiyama";
 import json from "@/data/test.json";
+import * as d3_to_pdf from "d3-save-pdf";
 
 export default {
 	name: "App",
@@ -66,6 +67,12 @@ export default {
 		carreras: ["Informatica", "Industrial", "Bioingenieria"]
 	}),
 	mounted() {},
-	methods: {}
+	methods: {
+		download() {
+			d3_to_pdf.save(d3.select("svg").node(), {
+				filename: "carrera"
+			});
+		}
+	}
 };
 </script>
