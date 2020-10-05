@@ -1,0 +1,36 @@
+[
+	{
+		"id": "0",
+		"parentIds": [],
+		"layer": "0"
+	},
+	{
+		"id": "1",
+		"parentIds": [],
+		"layer": "0"
+	},
+	{
+		"id": "2",
+		"parentIds": [],
+		"layer": "1"
+	},
+	{
+		"id": "3",
+		"parentIds": ["0", "1"],
+		"layer": "2"
+	},
+	{
+		"id": "4",
+		"parentIds": ["0", "1"],
+		"layer": "2"
+	},
+	{
+		"id": "5",
+		"parentIds": ["3"],
+		"layer": "3"
+	},
+	{
+		"id": "6",
+		"parentIds": ["2", "5"]
+	}
+]
