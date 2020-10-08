@@ -99,9 +99,8 @@ export default {
 			const line = this.d3
 				.line()
 				.curve(this.d3.curveCatmullRom)
-				.x(d => d.x)
-				.y(d => d.y);
-
+				.x(d => d.x + 80)
+				.y(d => d.y + 80);
 			/*svgSelection
 				.append("rect")
 				.attr("width", "100%")
@@ -154,7 +153,9 @@ export default {
 				.append("rect")
 				.attr("fill", n => colorMap[n.id])
 				.attr("width", "200")
-				.attr("height", "100");
+				.attr("height", "100")
+				.attr("rx", "10")
+				.attr("ry", "10");
 
 			if (withArrows) {
 				const arrow = this.d3
@@ -201,7 +202,7 @@ export default {
 			nodes
 				.append("text")
 				//.text(d => d.id)
-				.text("Sistemas de Representacion\n 10.10 - Creditos: 3")
+				.text("Sistemas de Representacion 10.10 - Creditos: 3")
 				.attr("font-weight", "bold")
 				.attr("font-family", "Tahoma, Geneva, sans-serif")
 				.attr("font-size", "20")
@@ -209,6 +210,7 @@ export default {
 				.attr("alignment-baseline", "middle")
 				.attr("dominant-baseline", "middle")
 				.attr("fill", "black")
+				.attr("y", "10")
 				.call(wrap);
 		}
 	}

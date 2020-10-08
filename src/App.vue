@@ -53,6 +53,8 @@ import * as d3_dag from "d3-dag";
 import sugiyama from "./components/Sugiyama";
 import json from "@/data/test.json";
 import * as d3_to_pdf from "d3-save-pdf";
+import csv from "./data/CSVBioing.csv";
+//import csvtojson from "csvtojson";
 
 export default {
 	name: "App",
@@ -66,12 +68,40 @@ export default {
 		dag: d3_dag.dagStratify()(json),
 		carreras: ["Informatica", "Industrial", "Bioingenieria"]
 	}),
-	mounted() {},
+	async mounted() {
+		await d3.csv(csv).then(csv => console.log(csv));
+	},
 	methods: {
 		download() {
 			d3_to_pdf.save(d3.select("svg").node(), {
 				filename: "carrera"
 			});
+		},
+		//var csv is the CSV file with headers
+		csvToJSON(csv) {
+			var lines = csv.split("\n");
+
+			var result = [];
+
+			// NOTE: If your columns contain commas in their values, you'll need
+			// to deal with those before doing the next step
+			// (you might convert them to &&& or something, then covert them back later)
+			// jsfiddle showing the issue https://jsfiddle.net/
+			var headers = lines[0].split(",");
+
+			for (var i = 1; i < lines.length; i++) {
+				var obj = {};
+				var currentline = lines[i].split(",");
+
+				for (var j = 0; j < headers.length; j++) {
+					obj[headers[j]] = currentline[j];
+				}
+
+				result.push(obj);
+			}
+
+			//return result; //JavaScript object
+			return JSON.stringify(result); //JSON
 		}
 	}
 };
