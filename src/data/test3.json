@@ -1,0 +1,128 @@
+[
+	{
+		"id": "Bio-13",
+		"layer": "0",
+		"parentIds": [],
+		"materia": "Ingreso",
+		"creditos": ""
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "31.08",
+		"materia": "Sistemas de Representación",
+		"creditos": "3",
+		"layer": "1"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.17",
+		"materia": "Matemática I",
+		"creditos": "6",
+		"layer": "1"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.18",
+		"materia": "Álgebra Lineal",
+		"creditos": "6",
+		"layer": "1"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "94.21",
+		"materia": "Formación General I",
+		"creditos": "3",
+		"layer": "1"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "12.02",
+		"materia": "Química II",
+		"creditos": "6",
+		"layer": "2"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "71.20",
+		"materia": "Informática General",
+		"creditos": "3",
+		"layer": "2"
+	},
+	{
+		"parentIds": ["93.18", "93.17"],
+		"id": "93.02",
+		"materia": "Matemática II",
+		"creditos": "6",
+		"layer": "2"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.41",
+		"materia": "Física I",
+		"creditos": "6",
+		"layer": "2"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "94.24",
+		"materia": "Metodología del Aprendizaje",
+		"creditos": "3",
+		"layer": "2"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "16.01",
+		"materia": "Biología Molecular y Celular",
+		"creditos": "6",
+		"layer": "3"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "71.44",
+		"materia": "Estructura de Datos y Programación",
+		"creditos": "6",
+		"layer": "3"
+	},
+	{
+		"parentIds": ["93.18", "93.17"],
+		"id": "93.03",
+		"materia": "Matemática III",
+		"creditos": "6",
+		"layer": "3"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.42",
+		"materia": "Física II",
+		"creditos": "6",
+		"layer": "3"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "16.02",
+		"materia": "Histología y Anatomía",
+		"creditos": "6",
+		"layer": "4"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.24",
+		"materia": "Probabilidad y Estadística",
+		"creditos": "6",
+		"layer": "4"
+	},
+	{
+		"parentIds": ["93.03", "93.41"],
+		"id": "93.43",
+		"materia": "Física III",
+		"creditos": "6",
+		"layer": "4"
+	},
+	{
+		"parentIds": ["93.02", "93.03"],
+		"id": "93.65",
+		"materia": "Matemática IV",
+		"creditos": "6",
+		"layer": "4"
+	}
+]

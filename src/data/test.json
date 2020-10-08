@@ -1,36 +1,42 @@
 [
 	{
-		"id": "0",
 		"parentIds": [],
+		"id": "30.1",
+
 		"layer": "0"
 	},
 	{
+		"parentIds": [],
 		"id": "1",
-		"parentIds": [],
+
 		"layer": "0"
 	},
 	{
-		"id": "2",
 		"parentIds": [],
+		"id": "2",
+
 		"layer": "1"
 	},
 	{
+		"parentIds": ["30.1", "1"],
 		"id": "3",
-		"parentIds": ["0", "1"],
+
 		"layer": "2"
 	},
 	{
+		"parentIds": ["30.1", "1"],
 		"id": "4",
-		"parentIds": ["0", "1"],
+
 		"layer": "2"
 	},
 	{
-		"id": "5",
 		"parentIds": ["3"],
+		"id": "5",
+
 		"layer": "3"
 	},
 	{
-		"id": "6",
-		"parentIds": ["2", "5"]
+		"parentIds": ["2", "5"],
+		"id": "6"
 	}
 ]

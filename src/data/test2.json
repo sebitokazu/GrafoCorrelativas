@@ -1,0 +1,345 @@
+[
+	{
+		"id": "Bio-13",
+		"layer": "0",
+		"parentIds": [],
+		"label": "Ingreso",
+		"creditos": ""
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "31.08",
+		"materia": "Sistemas de Representación",
+		"creditos": "3",
+		"layer": "1"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.17",
+		"materia": "Matemática I",
+		"creditos": "6",
+		"layer": "1"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.18",
+		"materia": "Álgebra Lineal",
+		"creditos": "6",
+		"layer": "1"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "94.21",
+		"materia": "Formación General I",
+		"creditos": "3",
+		"layer": "1"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "12.02",
+		"materia": "Química II",
+		"creditos": "6",
+		"layer": "2"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "71.20",
+		"materia": "Informática General",
+		"creditos": "3",
+		"layer": "2"
+	},
+	{
+		"parentIds": ["93.18", "93.17"],
+		"id": "93.02",
+		"materia": "Matemática II",
+		"creditos": "6",
+		"layer": "2"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.41",
+		"materia": "Física I",
+		"creditos": "6",
+		"layer": "2"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "94.24",
+		"materia": "Metodología del Aprendizaje",
+		"creditos": "3",
+		"layer": "2"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "16.01",
+		"materia": "Biología Molecular y Celular",
+		"creditos": "6",
+		"layer": "3"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "71.44",
+		"materia": "Estructura de Datos y Programación",
+		"creditos": "6",
+		"layer": "3"
+	},
+	{
+		"parentIds": ["93.18", "93.17"],
+		"id": "93.03",
+		"materia": "Matemática III",
+		"creditos": "6",
+		"layer": "3"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.42",
+		"materia": "Física II",
+		"creditos": "6",
+		"layer": "3"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "16.02",
+		"materia": "Histología y Anatomía",
+		"creditos": "6",
+		"layer": "4"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.24",
+		"materia": "Probabilidad y Estadística",
+		"creditos": "6",
+		"layer": "4"
+	},
+	{
+		"parentIds": ["93.03", "93.41"],
+		"id": "93.43",
+		"materia": "Física III",
+		"creditos": "6",
+		"layer": "4"
+	},
+	{
+		"parentIds": ["93.02", "93.03"],
+		"id": "93.65",
+		"materia": "Matemática IV",
+		"creditos": "6",
+		"layer": "4"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "16.03",
+		"materia": "Fisiología",
+		"creditos": "6",
+		"layer": "5"
+	},
+	{
+		"parentIds": ["16.02", "93.41"],
+		"id": "16.12",
+		"materia": "Biomateriales",
+		"creditos": "3",
+		"layer": "5"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "21.06",
+		"materia": "Electrotecnia",
+		"creditos": "3",
+		"layer": "5"
+	},
+	{
+		"parentIds": ["93.65", "93.43"],
+		"id": "93.44",
+		"materia": "Física IV",
+		"creditos": "6",
+		"layer": "5"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "93.57",
+		"materia": "Matemática V",
+		"creditos": "6",
+		"layer": "5"
+	},
+	{
+		"parentIds": ["93.57", "21.06"],
+		"id": "16.06",
+		"materia": "Señales y Sistemas",
+		"creditos": "3",
+		"layer": "6"
+	},
+	{
+		"parentIds": ["16.02", "93.41"],
+		"id": "16.13",
+		"materia": "Biomecánica",
+		"creditos": "6",
+		"layer": "6"
+	},
+	{
+		"parentIds": ["93.57", "16.03", "93.43"],
+		"id": "16.14",
+		"materia": "Fisiología Cuantitativa",
+		"creditos": "6",
+		"layer": "6"
+	},
+	{
+		"parentIds": ["71.44", "21.06"],
+		"id": "23.02",
+		"materia": "Electrónica Analógica y Digital",
+		"creditos": "6",
+		"layer": "6"
+	},
+	{
+		"parentIds": ["71.44", "93.03"],
+		"id": "93.54",
+		"materia": "Métodos Numéricos",
+		"creditos": "3",
+		"layer": "6"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "94.51",
+		"materia": "Inglés I",
+		"creditos": "0",
+		"layer": "6"
+	},
+	{
+		"parentIds": ["16.03", "16.06"],
+		"id": "16.15",
+		"materia": "Procesamiento de Señales Biomédicas",
+		"creditos": "6",
+		"layer": "7"
+	},
+	{
+		"parentIds": ["16.03", "23.02"],
+		"id": "16.17",
+		"materia": "Instrumentación Biomédica I",
+		"creditos": "6",
+		"layer": "7"
+	},
+	{
+		"parentIds": ["71.44", "16.03"],
+		"id": "16.20",
+		"materia": "Biomedicina Estructural y Computacional",
+		"creditos": "6",
+		"layer": "7"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "23.03",
+		"materia": "Sistemas de Control",
+		"creditos": "3",
+		"layer": "7"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "61.31",
+		"materia": "Derecho para Ingenieros",
+		"creditos": "3",
+		"layer": "7"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "11.15",
+		"materia": "Organización Industrial",
+		"creditos": "3",
+		"layer": "8"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "16.16",
+		"materia": "Procesamiento de Imágenes Biomédicas",
+		"creditos": "6",
+		"layer": "8"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "16.18",
+		"materia": "Instrumentación Biomédica II",
+		"creditos": "6",
+		"layer": "8"
+	},
+	{
+		"parentIds": ["16.03", "23.02"],
+		"id": "16.19",
+		"materia": "Biosensores",
+		"creditos": "3",
+		"layer": "8"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "16.21",
+		"materia": "Bioinformática",
+		"creditos": "6",
+		"layer": "8"
+	},
+	{
+		"parentIds": ["71.44", "16.14"],
+		"id": "16.22",
+		"materia": "Informática Médica",
+		"creditos": "6",
+		"layer": "9"
+	},
+	{
+		"parentIds": ["16.12", "16.14"],
+		"id": "16.23",
+		"materia": "Órganos Artificiales",
+		"creditos": "6",
+		"layer": "9"
+	},
+	{
+		"parentIds": ["16.16", "16.18"],
+		"id": "16.24",
+		"materia": "Ingeniería de Rehabilitación",
+		"creditos": "3",
+		"layer": "9"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "16.30",
+		"materia": "Proyecto Final de Carrera (Anual)",
+		"creditos": "6",
+		"layer": "9"
+	},
+	{
+		"parentIds": ["94.21", "94.24"],
+		"id": "94.28",
+		"materia": "Formación General II",
+		"creditos": "3",
+		"layer": "9"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "12.83",
+		"materia": "Seguridad Ocupacional y Ambiental",
+		"creditos": "3",
+		"layer": "10"
+	},
+	{
+		"parentIds": ["16.16", "16.18"],
+		"id": "16.33",
+		"materia": "Ingeniería Hospitalaria",
+		"creditos": "6",
+		"layer": "10"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "16.86",
+		"materia": "Práctica Laboral",
+		"creditos": "0",
+		"layer": "10"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "61.23",
+		"materia": "Economía para Ingenieros",
+		"creditos": "3",
+		"layer": "10"
+	},
+	{
+		"parentIds": ["Bio-13"],
+		"id": "94.52",
+		"materia": "Inglés II",
+		"creditos": "0",
+		"layer": "10"
+	}
+]

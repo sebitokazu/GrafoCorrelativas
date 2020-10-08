@@ -16,7 +16,7 @@ export default {
 	data: () => ({
 		width: screen.width,
 		height: screen.height,
-		layering: "Simplex (slow)",
+		layering: "Fake",
 		decross: "Optimal (slow)",
 		coord: "Minimum Curves (slow)",
 		d3: Object.assign({}, d3_base, d3_dag, d3_wrap)
@@ -32,13 +32,7 @@ export default {
 				"Coffman Graham (medium)": this.d3.layeringCoffmanGraham(),
 				"Topological (fast)": this.d3.layeringTopological(),
 				Fake: function layeringTest(dag) {
-					let arr = [0, 0, 2, 1, 1, 2, 3];
-					for (const [layer, node] of dag
-						.idescendants("before")
-						.entries()) {
-						node.layer = arr[node.id];
-						console.log(layer);
-					}
+					dag.eachBefore(n => (n.layer = n.data.layer));
 					return dag;
 				}
 			};
@@ -60,16 +54,16 @@ export default {
 
 			const layout = this.d3
 				.sugiyama()
+				//.nodeSize(200, 100)
 				.size([this.width, this.height])
 				.layering(layerings[this.layering])
 				.decross(decrossings[this.decross])
 				.coord(coords[this.coord]);
 
 			layout(dag);
-			let withArrows = false;
-			this.draw(dag, withArrows);
+			this.draw(dag);
 		},
-		draw(dag, withArrows) {
+		draw(dag) {
 			// This code only handles rendering
 			const nodeRadius = 35;
 
@@ -99,18 +93,25 @@ export default {
 			const line = this.d3
 				.line()
 				.curve(this.d3.curveCatmullRom)
-				.x(d => d.x + 80)
-				.y(d => d.y + 80);
+				.x(d => d.x)
+				.y(d => d.y);
 			/*svgSelection
 				.append("rect")
 				.attr("width", "100%")
 				.attr("height", "100%")
 				.attr("fill", "black");*/
 			// Plot edges
+
+			const actualLinks = [];
+
+			dag.links().forEach(link => {
+				if (link.source.layer != "0") actualLinks.push(link);
+			});
+
 			svgSelection
 				.append("g")
 				.selectAll("path")
-				.data(dag.links())
+				.data(actualLinks)
 				.enter()
 				.append("path")
 				.attr("d", ({ data }) => line(data.points))
@@ -154,41 +155,11 @@ export default {
 				.attr("fill", n => colorMap[n.id])
 				.attr("width", "200")
 				.attr("height", "100")
+				.attr("x", -20)
+				.attr("y", -20)
 				.attr("rx", "10")
 				.attr("ry", "10");
 
-			if (withArrows) {
-				const arrow = this.d3
-					.symbol()
-					.type(this.d3.symbolTriangle)
-					.size((nodeRadius * nodeRadius) / 5.0);
-				svgSelection
-					.append("g")
-					.selectAll("path")
-					.data(dag.links())
-					.enter()
-					.append("path")
-					.attr("d", arrow)
-					.attr("transform", ({ source, target, data }) => {
-						console.log(source);
-						console.log(target);
-						const [end, start] = data.points.reverse();
-						// This sets the arrows the node radius (20) + a little bit (3) away from the node center, on the last line segment of the edge. This means that edges that only span ine level will work perfectly, but if the edge bends, this will be a little off.
-						const dx = start.x - end.x;
-						const dy = start.y - end.y;
-						const scale =
-							(nodeRadius * 1.15) / Math.sqrt(dx * dx + dy * dy);
-						// This is the angle of the last line segment
-						const angle =
-							(Math.atan2(-dy, -dx) * 180) / Math.PI + 90;
-						console.log(angle, dx, dy);
-						return `translate(${end.x + dx * scale}, ${end.y +
-							dy * scale}) rotate(${angle})`;
-					})
-					.attr("fill", ({ target }) => colorMap[target.id])
-					.attr("stroke", "white")
-					.attr("stroke-width", 1.5);
-			}
 			var wrap;
 			// create a text wrapping function
 			wrap = this.d3
@@ -201,8 +172,8 @@ export default {
 
 			nodes
 				.append("text")
-				//.text(d => d.id)
-				.text("Sistemas de Representacion 10.10 - Creditos: 3")
+				.text(d => d.data.materia)
+				//.text("Sistemas de Representacion 10.10 - Creditos: 3")
 				.attr("font-weight", "bold")
 				.attr("font-family", "Tahoma, Geneva, sans-serif")
 				.attr("font-size", "20")
