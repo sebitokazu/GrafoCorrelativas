@@ -59,7 +59,7 @@
 <script>
 //import HelloWorld from "./components/HelloWorld";
 import * as d3 from "d3";
-import * as d3_dag from "d3-dag";
+import { stratify } from "d3-dag/src/dag/stratify";
 import sugiyama from "./components/Sugiyama";
 import json2 from "@/data/test3.json";
 import * as d3_to_pdf from "d3-save-pdf";
@@ -73,9 +73,9 @@ export default {
 	},
 
 	data: () => ({
-		dag: d3_dag.dagStratify()(json2),
+		dag: stratify()(json2),
 		carreras: ["Informatica", "Industrial", "Bioingenieria"],
-		hasLoaded: true,
+		hasLoaded: false,
 		gifloader:
 			"https://cdn.dribbble.com/users/159302/screenshots/1900376/material-spinner2.gif"
 	}),

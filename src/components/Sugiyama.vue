@@ -16,9 +16,10 @@ export default {
 	data: () => ({
 		width: screen.width,
 		height: screen.height,
-		layering: "Fake",
+		layering: "Fixed Layer",
 		decross: "Optimal (slow)",
 		coord: "Minimum Curves (slow)",
+		sep: "Edge Aware Separation",
 		d3: Object.assign({}, d3_base, d3_dag, d3_wrap)
 	}),
 	mounted() {
@@ -31,9 +32,10 @@ export default {
 				"Longest Path (fast)": this.d3.layeringLongestPath(),
 				"Coffman Graham (medium)": this.d3.layeringCoffmanGraham(),
 				"Topological (fast)": this.d3.layeringTopological(),
-				Fake: function layeringTest(dag) {
-					dag.eachBefore(n => (n.layer = n.data.layer));
-					return dag;
+				"Fixed Layer": function layeringTest(dag) {
+					for (let [, node] of dag.idescendants("before").entries()) {
+						node.layer = node.data.layer;
+					}
 				}
 			};
 
@@ -42,7 +44,8 @@ export default {
 				"Two Layer Opt (medium)": this.d3
 					.decrossTwoLayer()
 					.order(this.d3.twolayerOpt()),
-				"Two Layer (flast)": this.d3.decrossTwoLayer()
+				"Two Layer (flast)": this.d3.decrossTwoLayer(),
+				"Two Layer Mean (flast)": this.d3.decrossTwoLayer()
 			};
 
 			const coords = {
@@ -52,13 +55,22 @@ export default {
 				"Center (fast)": this.d3.coordCenter()
 			};
 
+			const seps = {
+				"Constant Separation": () => 1,
+				"Edge Aware Separation": (left, right) =>
+					+!(left instanceof this.d3.SugiDummyNode) +
+					+!(right instanceof this.d3.SugiDummyNode),
+				"My Spacer": () => 100
+			};
+
 			const layout = this.d3
 				.sugiyama()
-				//.nodeSize(200, 100)
+				.nodeSize([100, 200])
 				.size([this.width, this.height])
 				.layering(layerings[this.layering])
 				.decross(decrossings[this.decross])
-				.coord(coords[this.coord]);
+				.coord(coords[this.coord])
+				.separation(seps[this.sep]);
 
 			layout(dag);
 			this.draw(dag);
@@ -85,9 +97,9 @@ export default {
 			const steps = dag.size();
 			const interp = this.d3.interpolateRainbow;
 			const colorMap = {};
-			dag.each((node, i) => {
-				colorMap[node.id] = interp(i / steps);
-			});
+			for (const [, node] of dag.idescendants().entries()) {
+				colorMap[node.id] = interp((node.layer + steps) / steps);
+			}
 
 			// How to draw edges
 			const line = this.d3
@@ -114,7 +126,7 @@ export default {
 				.data(actualLinks)
 				.enter()
 				.append("path")
-				.attr("d", ({ data }) => line(data.points))
+				.attr("d", ({ points }) => line(points))
 				.attr("fill", "none")
 				.attr("stroke-width", 3)
 				.attr("stroke", ({ source, target }) => {
