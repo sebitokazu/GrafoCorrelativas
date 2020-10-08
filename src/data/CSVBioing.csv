@@ -1,0 +1,73 @@
+AÑO,CUATRIMESTRE,COD,MATERIA,CREDITOS,CRED. REQUERIDOS,PR,DIFICULTAD,Plan,P1,P2,P3,Tipo (continúa desde L)
+1,1,31.08,Sistemas de Representación,3,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+1,1,93.17,Matemática I,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+1,1,93.18,Álgebra Lineal,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+1,1,94.21,Formación General I,3,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+1,2,12.02,Química II,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+1,2,71.20,Informática General,3,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+1,2,93.02,Matemática II,6,0,2,Bio-13,Bio-13,93.18,93.17,,Obligatoria
+1,2,93.41,Física I,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+1,2,94.24,Metodología del Aprendizaje,3,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+2,1,16.01,Biología Molecular y Celular,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+2,1,71.44,Estructura de Datos y Programación,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+2,1,93.03,Matemática III,6,0,2,Bio-13,Bio-13,93.18,93.17,,Obligatoria
+2,1,93.42,Física II,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+2,2,16.02,Histología y Anatomía,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+2,2,93.24,Probabilidad y Estadística,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+2,2,93.43,Física III,6,0,2,Bio-13,Bio-13,93.03,93.41,,Obligatoria
+2,2,93.65,Matemática IV,6,0,2,Bio-13,Bio-13,93.02,93.03,,Obligatoria
+3,1,16.03,Fisiología,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+3,1,16.12,Biomateriales,3,0,2,Bio-13,Bio-13,16.02,93.41,,Obligatoria
+3,1,21.06,Electrotecnia,3,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+3,1,93.44,Física IV,6,0,2,Bio-13,Bio-13,93.65,93.43,,Obligatoria
+3,1,93.57,Matemática V,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+3,2,16.06,Señales y Sistemas,3,0,2,Bio-13,Bio-13,93.57,21.06,,Obligatoria
+3,2,16.13,Biomecánica,6,0,2,Bio-13,Bio-13,16.02,93.41,,Obligatoria
+3,2,16.14,Fisiología Cuantitativa,6,0,3,Bio-13,Bio-13,93.57,16.03,93.43,Obligatoria
+3,2,23.02,Electrónica Analógica y Digital,6,0,2,Bio-13,Bio-13,71.44,21.06,,Obligatoria
+3,2,93.54,Métodos Numéricos,3,0,2,Bio-13,Bio-13,71.44,93.03,,Obligatoria
+3,2,94.51,Inglés I,0,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+4,1,16.15,Procesamiento de Señales Biomédicas,6,0,2,Bio-13,Bio-13,16.03,16.06,,Obligatoria
+4,1,16.17,Instrumentación Biomédica I,6,0,2,Bio-13,Bio-13,16.03,23.02,,Obligatoria
+4,1,16.20,Biomedicina Estructural y Computacional,6,0,2,Bio-13,Bio-13,71.44,16.03,,Obligatoria
+4,1,23.03,Sistemas de Control,3,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+4,1,61.31,Derecho para Ingenieros,3,144,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+4,2,11.15,Organización Industrial,3,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+4,2,16.16,Procesamiento de Imágenes Biomédicas,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+4,2,16.18,Instrumentación Biomédica II,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+4,2,16.19,Biosensores,3,0,2,Bio-13,Bio-13,16.03,23.02,,Obligatoria
+4,2,16.21,Bioinformática,6,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+5,1,16.22,Informática Médica,6,0,2,Bio-13,Bio-13,71.44,16.14,,Obligatoria
+5,1,16.23,Órganos Artificiales,6,0,2,Bio-13,Bio-13,16.12,16.14,,Obligatoria
+5,1,16.24,Ingeniería de Rehabilitación,3,0,2,Bio-13,Bio-13,16.16,16.18,,Obligatoria
+5,1,16.30,Proyecto Final de Carrera (Anual),6,180,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+5,1,94.28,Formación General II,3,0,2,Bio-13,Bio-13,94.21,94.24,,Obligatoria
+5,2,12.83,Seguridad Ocupacional y Ambiental,3,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+5,2,16.33,Ingeniería Hospitalaria,6,0,2,Bio-13,Bio-13,16.16,16.18,,Obligatoria
+5,2,16.86,Práctica Laboral,0,170,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+5,2,61.23,Economía para Ingenieros,3,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+5,2,94.52,Inglés II,0,0,1,Bio-13,Bio-13,Bio-13,,,Obligatoria
+5,2,10.07,Creatividad,3,144,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,10.09,Formación para Emprendedores,3,144,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,11.34,Taller de Modelización de Productos,3,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,11.76,Gestión de Calidad,3,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,12.32,Química Orgánica I,4,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,16.26,Neurociencias,3,0,2,Bio-13,Bio-13,16.16,16.17,,Electivas
+5,2,16.27,Ingeniería de Tejidos,3,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,16.28,Computación de Alto Desempeño y Distribuida,3,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,16.29,Diseño de Fármacos,3,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,16.31,Normativa Biomédica y Marco Regulatorio,3,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,16.32,Redes Neuronales en Bioingeniería,3,0,2,Bio-13,Bio-13,16.16,16.17,,Electivas
+5,2,16.43,Bioestadística,3,0,2,Bio-13,Bio-13,93.24,16.03,,Electivas
+5,2,16.44,Física Médica,3,0,2,Bio-13,Bio-13,93.44,16.17,,Electivas
+5,2,23.05,Acústica para Ingenieros,3,0,2,Bio-13,Bio-13,93.57,21.06,,Electivas
+5,2,23.08,Control Avanzado,3,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,23.15,Realidad Virtual,3,0,2,Bio-13,Bio-13,71.44,93.18,,Electivas
+5,2,31.19,Estática y Resistencia de Materiales,6,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,31.25,Termodinámica,3,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,71.56,Programación Básica,3,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,72.75,Aprendizaje Automático (Machine Learning),3,0,2,Bio-13,Bio-13,71.44,93.24,,Electivas
+5,2,93.07,Métodos Numéricos,3,0,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,94.23,Formación General III,3,144,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,94.27,Administración de Recursos Humanos,3,144,1,Bio-13,Bio-13,Bio-13,,,Electivas
+5,2,94.42,Comunicación Estratégica,3,144,1,Bio-13,Bio-13,Bio-13,,,Electivas
